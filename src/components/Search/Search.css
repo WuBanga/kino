@@ -1,0 +1,23 @@
+.search {
+  background-color: wheat;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.search__input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+.search__input::placeholder {
+  color: gray;
+}
+
+.search__input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="gray"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>');
+}
