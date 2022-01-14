@@ -1,0 +1,23 @@
+.categories {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+}
+
+.categories::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke="rgba(148, 184, 197, 1)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>');
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  pointer-events: none;
+}
+
+.categories__select {
+  width: 100%;
+  appearance: none;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 0.5rem 1rem;
+}
