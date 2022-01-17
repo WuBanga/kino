@@ -9,5 +9,5 @@
   --text-color: var(--dark-sky-blue);
   --search-color: var(--dark-rich-black);
   --focus-color: var(--chinese-violet);
-  --element-radius: 0.5rem;
+  --rounded-base: 0.5rem;
 }

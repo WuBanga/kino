@@ -6,18 +6,18 @@
   gap: 0.3rem;
   cursor: pointer;
   padding-bottom: 0.5rem;
-  border-radius: var(--element-radius);
+  border-radius: var(--rounded-base);
 }
 
-.movie__poster {
-  border-radius: var(--element-radius);
+.movie-card__poster {
+  border-radius: var(--rounded-base);
 }
 
-.movie__title {
+.movie-card__title {
   font-size: 1.5rem;
 }
 
-.movie__genre {
+.movie-card__genre {
   font-size: 0.7rem;
   color: var(--focus-color);
 }

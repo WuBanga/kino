@@ -5,8 +5,8 @@ import './FilterBar.css';
 export const FilterBar = () => {
   return (
     <section className="filter-bar">
-      <Categories className="filter-bar__element" />
-      <Button className="filter-bar__element" icon={<FiltersIcon />}>
+      <Categories className="filter-bar__filter" />
+      <Button className="filter-bar__filter" icon={<FiltersIcon />}>
         Filters
       </Button>
     </section>

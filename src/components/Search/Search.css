@@ -16,7 +16,7 @@
 
 .search__input {
   background-color: var(--secondary-color);
-  border-radius: var(--element-radius);
+  border-radius: var(--rounded-base);
   padding: 0.5rem 1rem;
   padding-left: 40px;
   padding-right: 10px;
