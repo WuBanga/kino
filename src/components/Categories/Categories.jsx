@@ -1,6 +1,6 @@
 import './Categories.css';
 
-export const Categories = props => {
+export const Categories = (props) => {
   const classes = ['categories'];
   if (props.className) {
     classes.push(props.className);

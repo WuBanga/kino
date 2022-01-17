@@ -1,7 +1,7 @@
 import './Button.css';
 
-export const Button = props => {
-  const [icon, className, children, ...buttonProps] = props;
+export const Button = (props) => {
+  const { icon, className, children, ...buttonProps } = props;
   const classes = ['button'];
   if (className) {
     classes.push(className);
