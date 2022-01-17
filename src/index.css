@@ -1,5 +1,5 @@
 @import './reset.css';
-@import './colors.css';
+@import './variables.css';
 
 * {
   color: var(--text-color);
@@ -7,6 +7,11 @@
 
 body {
   background-color: var(--primary-color);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 #root {
@@ -19,7 +24,7 @@ body {
 
 button:focus,
 input:focus,
-link:focus,
+a:focus,
 select:focus {
   outline: none;
   box-shadow: 0 0 0 2px var(--focus-color);

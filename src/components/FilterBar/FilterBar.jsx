@@ -5,8 +5,10 @@ import './FilterBar.css';
 export const FilterBar = () => {
   return (
     <section className="filter-bar">
-      <Categories />
-      <Button icon={<FiltersIcon />}>Filters</Button>
+      <Categories className="filter-bar__element" />
+      <Button className="filter-bar__element" icon={<FiltersIcon />}>
+        Filters
+      </Button>
     </section>
   );
 };

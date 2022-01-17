@@ -1,5 +1,6 @@
 import { Search } from '../Search/Search';
 import { FilterBar } from '../FilterBar/FilterBar';
+import { MovieList } from '../MovieList/MovieList';
 import './Main.css';
 
 export const Main = () => {
@@ -7,6 +8,8 @@ export const Main = () => {
     <main className="main">
       <Search />
       <FilterBar />
+      <h1>Popular movies</h1>
+      <MovieList />
     </main>
   );
 };

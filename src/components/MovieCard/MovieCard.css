@@ -1,0 +1,23 @@
+.movie-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.3rem;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  border-radius: var(--element-radius);
+}
+
+.movie__poster {
+  border-radius: var(--element-radius);
+}
+
+.movie__title {
+  font-size: 1.5rem;
+}
+
+.movie__genre {
+  font-size: 0.7rem;
+  color: var(--focus-color);
+}
