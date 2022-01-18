@@ -1,0 +1,17 @@
+.button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 0;
+  border-radius: var(--rounded-base);
+  background-color: var(--secondary-color);
+}
+
+.button__icon {
+  width: 20px;
+  height: 20px;
+}
