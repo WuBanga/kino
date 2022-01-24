@@ -2,22 +2,22 @@ import { requestMovies } from '../api/api';
 import { useState, useEffect } from 'react';
 
 export const useMovies = (type) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState();
-  const [isError, setIsError] = useState(false);
+  const [isLoadingMovies, setIsLoadingMovies] = useState(true);
+  const [movies, setMovies] = useState();
+  const [isErrorMovies, setIsError] = useState(false);
 
   useEffect(() => {
     requestMovies(type)
       .then((result) => {
-        setData(result);
-        setIsLoading(false);
+        setMovies(result);
+        setIsLoadingMovies(false);
       })
       .catch((error) => {
         console.error(error);
         setIsError(true);
-        setIsLoading(false);
+        setIsLoadingMovies(false);
       });
   }, [type]);
 
-  return { isLoading, data, isError };
+  return { isLoadingMovies, movies, isErrorMovies };
 };

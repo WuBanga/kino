@@ -6,11 +6,11 @@ import { BookmarkIcon } from '../Icons/BookmarkIcon';
 import './Menu.css';
 export const Menu = () => {
   return (
-    <div className="menu">
+    <nav className="menu">
       <IconButton icon={<HomeIcon />} />
       <IconButton icon={<SearchIcon />} />
       <IconButton icon={<BookmarkIcon />} />
       <IconButton icon={<UserProfileIcon />} />
-    </div>
+    </nav>
   );
 };

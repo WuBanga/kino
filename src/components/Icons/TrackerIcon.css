@@ -6,7 +6,7 @@
   background-color: #4b88a2;
   border-radius: var(--rounded-base);
   padding: 0.5rem;
-  color: white;
+  color: var(--poster-text-color);
 }
 
 .tracker__icon {

@@ -3,7 +3,7 @@ export const RatingIcon = (props) => {
   const { rating } = props;
   let ratingModificator = getRatingColor(rating);
 
-  return <span className={'rating ' + ratingModificator}>{rating}</span>;
+  return <span className={`rating ${ratingModificator}`}>{rating}</span>;
 };
 
 const getRatingColor = (rating) => {

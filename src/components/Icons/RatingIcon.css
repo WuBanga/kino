@@ -5,7 +5,7 @@
   align-items: center;
   padding: 0.2rem 0.7rem;
   border-radius: var(--rounded-base);
-  color: white;
+  color: var(--poster-text-color);
 }
 
 .rating--green {
