@@ -1,0 +1,21 @@
+.menu {
+  display: flex;
+  position: sticky;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.menu__link {
+  background: transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
