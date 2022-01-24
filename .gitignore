@@ -4,3 +4,4 @@ dist
 dist-ssr
 *.local
 layout.excalidraw
+src/api/config.js
