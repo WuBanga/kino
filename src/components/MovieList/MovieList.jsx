@@ -6,7 +6,7 @@ import './MovieList.css';
 const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 export const MovieList = () => {
   const path = 'https://image.tmdb.org/t/p/original';
-  const { isLoadingMovies, data, isErrorMovies } = useMovies('popular');
+  const { isLoadingMovies, movies, isErrorMovies } = useMovies('popular');
   const { isLoadingGenres, genres, isErrorGenres } = useGenres();
   if (isErrorMovies || isErrorGenres) {
     return <h1>Error</h1>;
@@ -18,7 +18,7 @@ export const MovieList = () => {
 
   return (
     <section className="movie-list">
-      {data.results.map((movie) => (
+      {movies.results.map((movie) => (
         <MovieCard
           id={movie.id}
           key={movie.id}
