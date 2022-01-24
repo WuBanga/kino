@@ -3,7 +3,6 @@ import { HomeIcon } from '../Icons/HomeIcon';
 import { SearchIcon } from '../Icons/SearchIcon';
 import { UserProfileIcon } from '../Icons/UserProfileIcon';
 import { BookmarkIcon } from '../Icons/BookmarkIcon';
-import { CollectionIcon } from '../Icons/CollectionIcon';
 import './Menu.css';
 export const Menu = () => {
   return (
