@@ -1,7 +1,7 @@
 import { apiKey } from './config';
 
-export const requestMovies = async (type, language = 'ru-RU') => {
-  const path = `https://api.themoviedb.org/3/movie/${type}?api_key=${apiKey}&language=${language}&region=RU`;
+export const requestMovies = async ({ type, language = 'ru-RU', page = 1 }) => {
+  const path = `https://api.themoviedb.org/3/movie/${type}?api_key=${apiKey}&language=${language}&region=RU&page=${page}`;
 
   const response = await fetch(path);
   return await response.json();

@@ -1,13 +1,13 @@
 import { requestMovies } from '../api/api';
 import { useState, useEffect } from 'react';
 
-export const useMovies = (type) => {
+export const useMovies = (props) => {
   const [isLoadingMovies, setIsLoadingMovies] = useState(true);
   const [movies, setMovies] = useState();
   const [isErrorMovies, setIsError] = useState(false);
 
   useEffect(() => {
-    requestMovies(type)
+    requestMovies(props)
       .then((result) => {
         setMovies(result);
         setIsLoadingMovies(false);
@@ -17,7 +17,7 @@ export const useMovies = (type) => {
         setIsError(true);
         setIsLoadingMovies(false);
       });
-  }, [type]);
+  }, [props]);
 
   return { isLoadingMovies, movies, isErrorMovies };
 };

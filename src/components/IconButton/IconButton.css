@@ -8,10 +8,13 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: 0;
 }
 
 .icon-button__icon {
   width: 20px;
   height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
 }

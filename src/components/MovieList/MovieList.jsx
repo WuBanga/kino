@@ -1,35 +1,24 @@
-import { useGenres } from '../../hooks/useGenres';
-import { useMovies } from '../../hooks/useMovies';
 import { MovieCard } from '../MovieCard/MovieCard';
 import './MovieList.css';
 
-const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-export const MovieList = () => {
-  const path = 'https://image.tmdb.org/t/p/original';
-  const { isLoadingMovies, movies, isErrorMovies } = useMovies('popular');
-  const { isLoadingGenres, genres, isErrorGenres } = useGenres();
-  if (isErrorMovies || isErrorGenres) {
-    return <h1>Error</h1>;
-  }
+export const MovieList = (props) => {
+  const { data, isLoading } = props;
 
-  if (isLoadingMovies || isLoadingGenres) {
-    return <h1>Loading</h1>;
+  if (isLoading) {
+    return <h1>Loading...</h1>;
   }
 
   return (
     <section className="movie-list">
-      {movies.results.map((movie) => (
+      {data.map((movie) => (
         <MovieCard
           id={movie.id}
           key={movie.id}
           title={movie.title}
-          genre={capitalize(
-            genres.genres.filter((genre) => genre.id === movie.genre_ids[0])[0]
-              .name
-          )}
-          posterLink={path + movie.poster_path}
+          genre={movie.genre}
+          posterLink={movie.posterLink}
           adult={movie.adult}
-          rating={movie.vote_average}
+          rating={movie.rating}
         />
       ))}
     </section>

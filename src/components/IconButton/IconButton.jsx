@@ -1,10 +1,12 @@
 import './IconButton.css';
 
 export const IconButton = (props) => {
-  const { icon } = props;
+  const { icon, className } = props;
+  const classes = ['icon-button'];
+  classes.push(className);
   return (
-    <button className="icon-button">
-      {icon ? <i className="icon-button__icon">{icon}</i> : null}
+    <button className={classes.join(' ')}>
+      {icon ? <div className="icon-button__icon">{icon}</div> : null}
     </button>
   );
 };
