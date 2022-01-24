@@ -1,4 +1,4 @@
-import { Button } from '../Button/Button';
+import { IconButton } from '../IconButton/IconButton';
 import { HomeIcon } from '../Icons/HomeIcon';
 import { SearchIcon } from '../Icons/SearchIcon';
 import { UserProfileIcon } from '../Icons/UserProfileIcon';
@@ -7,10 +7,10 @@ import './Menu.css';
 export const Menu = () => {
   return (
     <div className="menu">
-      <Button className="menu__link" icon={<HomeIcon />} />
-      <Button className="menu__link" icon={<SearchIcon />} />
-      <Button className="menu__link" icon={<BookmarkIcon />} />
-      <Button className="menu__link" icon={<UserProfileIcon />} />
+      <IconButton icon={<HomeIcon />} />
+      <IconButton icon={<SearchIcon />} />
+      <IconButton icon={<BookmarkIcon />} />
+      <IconButton icon={<UserProfileIcon />} />
     </div>
   );
 };

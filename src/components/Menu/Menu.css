@@ -10,12 +10,3 @@
   width: 100%;
   backdrop-filter: blur(10px) brightness(60%);
 }
-
-.menu__link {
-  background: transparent;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-}
