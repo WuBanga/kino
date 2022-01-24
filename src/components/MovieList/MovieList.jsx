@@ -6,13 +6,13 @@ import './MovieList.css';
 const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 export const MovieList = () => {
   const path = 'https://image.tmdb.org/t/p/original';
-  const { isLoading, data, isError } = useMovies('popular');
+  const { isLoadingMovies, data, isErrorMovies } = useMovies('popular');
   const { isLoadingGenres, genres, isErrorGenres } = useGenres();
-  if (isError || isErrorGenres) {
+  if (isErrorMovies || isErrorGenres) {
     return <h1>Error</h1>;
   }
 
-  if (isLoading || isLoadingGenres) {
+  if (isLoadingMovies || isLoadingGenres) {
     return <h1>Loading</h1>;
   }
 
