@@ -1,0 +1,14 @@
+.age {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.age__text {
+  font-size: 0.7rem;
+}
+.age__plus {
+  font-size: 0.5rem;
+}

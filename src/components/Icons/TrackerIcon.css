@@ -1,0 +1,15 @@
+.tracker {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #4b88a2;
+  border-radius: var(--rounded-base);
+  padding: 0.5rem;
+  color: var(--poster-text-color);
+}
+
+.tracker__icon {
+  width: 16px;
+  height: 16px;
+}

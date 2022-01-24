@@ -1,0 +1,21 @@
+.rating {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--rounded-base);
+  color: var(--poster-text-color);
+}
+
+.rating--green {
+  background-color: #09bc8a;
+}
+
+.rating--orange {
+  background-color: #ee7b30;
+}
+
+.rating--red {
+  background-color: #a62639;
+}
