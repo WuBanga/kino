@@ -1,18 +1,13 @@
 import './MovieCard.css';
+import { Poster } from '../Poster/Poster';
 
-export const MovieCard = props => {
+export const MovieCard = (props) => {
+  const { id, title, genre, ...posterProps } = props;
   return (
     <a className="movie-card" href="">
-      <div>
-        <img
-          className="movie-card__poster"
-          src="https://image.tmdb.org/t/p/original/qIUFg6tzKeK5bUDguonWCAFceNB.jpg"
-          alt=""
-        />
-        <div className="movie-card__markers"></div>
-      </div>
-      <p className="movie-card__title">Squad</p>
-      <p className="movie-card__genre">Action</p>
+      <Poster {...posterProps} />
+      <p className="movie-card__title">{title}</p>
+      <p className="movie-card__genre">{genre}</p>
     </a>
   );
 };
