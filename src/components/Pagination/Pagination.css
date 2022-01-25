@@ -1,0 +1,20 @@
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+}
+
+.pagination .pagination__button {
+  background-color: var(--secondary-color);
+}
+
+.pagination .pagination__button--active {
+  background-color: var(--text-color);
+}
+
+.pagination__button--active .icon-button__icon {
+  color: var(--secondary-color);
+}

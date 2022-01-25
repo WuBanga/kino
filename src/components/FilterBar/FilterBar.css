@@ -7,4 +7,5 @@
 
 .filter-bar__filter {
   flex-grow: 1;
+  color: var(--text-color);
 }

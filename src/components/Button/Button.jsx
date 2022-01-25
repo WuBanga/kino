@@ -9,7 +9,7 @@ export const Button = (props) => {
   return (
     <button {...buttonProps} className={classes.join(' ')}>
       <p>{children}</p>
-      {icon ? <i className="button__icon">{icon}</i> : null}
+      {icon ? <div className="button__icon">{icon}</div> : null}
     </button>
   );
 };

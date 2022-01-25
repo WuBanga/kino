@@ -1,6 +1,7 @@
 import { Search } from '../Search/Search';
 import { FilterBar } from '../FilterBar/FilterBar';
-import { MovieList } from '../MovieList/MovieList';
+import { Movies } from '../Movies/Movies';
+
 import { Menu } from '../Menu/Menu';
 import './Main.css';
 
@@ -11,7 +12,7 @@ export const Main = () => {
         <Search />
         <FilterBar />
         <h1>Popular movies</h1>
-        <MovieList />
+        <Movies />
       </main>
       <Menu />
     </div>
