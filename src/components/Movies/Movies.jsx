@@ -2,15 +2,25 @@ import { MovieList } from '../MovieList/MovieList';
 import { Pagination } from '../Pagination/Pagination';
 import { useGenres } from '../../hooks/useGenres';
 import { useMovies } from '../../hooks/useMovies';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 const path = 'https://image.tmdb.org/t/p/original';
 export const Movies = () => {
+  const sectionRef = useRef(null);
+  const [page, setPage] = useState(1);
+  const moviesOptions = useMemo(() => {
+    return {
+      type: 'popular',
+      page: page,
+    };
+  }, [page]);
   const { isLoadingGenres, genres, isErrorGenres } = useGenres();
-  const { isLoadingMovies, movies, isErrorMovies } = useMovies({
-    type: 'popular',
-    page: 2,
-  });
+  const { isLoadingMovies, movies, isErrorMovies } = useMovies(moviesOptions);
+
+  useEffect(() => {
+    sectionRef.current?.scrollIntoView();
+  }, [page]);
+
   const data = useMemo(() => {
     if (
       isLoadingGenres ||
@@ -22,13 +32,17 @@ export const Movies = () => {
     }
 
     return movies.results.map((movie) => {
+      const genre = genres.genres.find(
+        (genre) => genre.id === movie.genre_ids[0]
+      );
+
       return {
         id: movie.id,
         title: movie.title,
-        genre: capitalize(
-          genres.genres.find((genre) => genre.id === movie.genre_ids[0]).name
-        ),
-        posterLink: `${path}${movie.poster_path}`,
+        genre: genre ? capitalize(genre.name) : '',
+        posterLink: movie.poster_path
+          ? `${path}${movie.poster_path}`
+          : undefined,
         adult: movie.adult,
         rating: movie.vote_average,
       };
@@ -40,9 +54,13 @@ export const Movies = () => {
   }
 
   return (
-    <section className="movies">
+    <section ref={sectionRef} className="movies">
       <MovieList data={data} isLoading={isLoadingGenres || isLoadingMovies} />
-      <Pagination />
+      <Pagination
+        totalPages={movies?.total_pages}
+        page={page}
+        onPageChange={setPage}
+      />
     </section>
   );
 };
